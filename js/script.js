@@ -25,8 +25,9 @@ $(document).ready(function(){
    console.log(eval(placeName).timeOfYear);
    console.log($(this).text());
    alert("Click!");
+   $("#" + placeName).remove();
    $(this).after('<div id="' + placeName +'">');
-   $("#" + placeName).append('<br><ul>');
+   $("#" + placeName).append('<br><ul> Vital Stats: ');
    $("#" + placeName).append('<li>' + 'Longitude: ' + eval(placeName).longLat[0] + '</li>');
    $("#" + placeName).append('<li>' + 'Latitude: ' + eval(placeName).longLat[1] + '</li>');
    $("#" + placeName).append('<li>' + 'Climate: ' + eval(placeName).climate + '</li>');
